@@ -1,6 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="90" viewBox="0 0 800 90" role="img" aria-label="Hi, I'm Kunal Patwari">
   <title>Hi, I'm Kunal Patwari</title>
-  <text x="400" y="58" text-anchor="middle"
-        font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace"
-        font-size="36" font-weight="700" fill="#6366F1">Hi 👋, I'm Kunal Patwari</text>
+  <style>
+    /* Each letter pops in at its own delay, so the line looks typed.
+       Without animation support everything is simply visible. */
+    .c { animation: show .01s linear both; }
+    .wave {
+      transform-box: fill-box;
+      transform-origin: 70% 80%;
+      animation: show .01s linear .825s both, wave 2.6s ease-in-out 2.8s infinite;
+    }
+    .cursor { animation: move 2.04s steps(24) .4s both, blink 1s steps(1) 2.44s infinite; }
+
+    @keyframes show { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes move { from { transform: translateX(-518.4px) } to { transform: translateX(0) } }
+    @keyframes blink { 0%, 100% { opacity: 1 } 50% { opacity: 0 } }
+    @keyframes wave {
+      0%, 60%, 100% { transform: rotate(0deg) }
+      10%, 30% { transform: rotate(16deg) }
+      20% { transform: rotate(-10deg) }
+      40% { transform: rotate(-6deg) }
+      50% { transform: rotate(12deg) }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .c, .wave, .cursor { animation: none }
+    }
+  </style>
+
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace"
+     font-size="36" font-weight="700" fill="#6366F1" text-anchor="middle">
+    <text class="c" x="151.6" y="58" style="animation-delay:.485s">H</text>
+    <text class="c" x="173.2" y="58" style="animation-delay:.57s">i</text>
+    <text class="c" x="259.6" y="58" style="animation-delay:.91s">,</text>
+    <text class="c" x="302.8" y="58" style="animation-delay:1.08s">I</text>
+    <text class="c" x="324.4" y="58" style="animation-delay:1.165s">'</text>
+    <text class="c" x="346" y="58" style="animation-delay:1.25s">m</text>
+    <text class="c" x="389.2" y="58" style="animation-delay:1.42s">K</text>
+    <text class="c" x="410.8" y="58" style="animation-delay:1.505s">u</text>
+    <text class="c" x="432.4" y="58" style="animation-delay:1.59s">n</text>
+    <text class="c" x="454" y="58" style="animation-delay:1.675s">a</text>
+    <text class="c" x="475.6" y="58" style="animation-delay:1.76s">l</text>
+    <text class="c" x="518.8" y="58" style="animation-delay:1.93s">P</text>
+    <text class="c" x="540.4" y="58" style="animation-delay:2.015s">a</text>
+    <text class="c" x="562" y="58" style="animation-delay:2.1s">t</text>
+    <text class="c" x="583.6" y="58" style="animation-delay:2.185s">w</text>
+    <text class="c" x="605.2" y="58" style="animation-delay:2.27s">a</text>
+    <text class="c" x="626.8" y="58" style="animation-delay:2.355s">r</text>
+    <text class="c" x="648.4" y="58" style="animation-delay:2.44s">i</text>
+  </g>
+
+  <text class="wave" x="227.2" y="58" text-anchor="middle" font-size="34"
+        font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif">👋</text>
+
+  <rect class="cursor" x="666" y="27" width="3" height="36" rx="1" fill="#6366F1"/>
 </svg>
